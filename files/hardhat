@@ -1,0 +1,9 @@
+#!/bin/bash
+read -p "Are you sure you want to initialise this folder for hardhat? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    npm init
+    npm install --save-dev hardhat
+    npx hardhat
+fi
